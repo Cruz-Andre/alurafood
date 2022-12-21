@@ -8,8 +8,8 @@
 - Listando e cadastrando Restaurantes :white_check_mark:
 - Desafio: paginação alternativa :white_check_mark:
 ### Aula 3:
-- Editando e deletando restaurantes
-- Desafio: obtendo os pratos via API
+- Editando e deletando restaurantes :white_check_mark:
+- Desafio: Campo de busca restaurante :white_check_mark:
 ### Aula 4: 
 - Layout na régua
 - Refatorando o axios
