@@ -1,17 +1,17 @@
-import axios from 'axios'
-import { TextField, Button } from "@mui/material"
+import { Box, TextField, Button, Typography, Container, Paper } from "@mui/material"
 import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom'
 import IRestaurante from '../../../interfaces/IRestaurante'
+import http from '../../../http'
 
 const FormularioRestaurante = () => {
 
   const parametrosDaURL = useParams()
-  console.log(parametrosDaURL);
+  //console.log(parametrosDaURL);
 
   useEffect(() => {
     if (parametrosDaURL.id) {
-      axios.get<IRestaurante>(`http://localhost:8000/api/v2/restaurantes/${parametrosDaURL.id}/`)
+      http.get<IRestaurante>(`restaurantes/${parametrosDaURL.id}/`)
         .then(resposta => setNomeRestaurante(resposta.data.nome))
     }
   }, [parametrosDaURL])
@@ -22,7 +22,7 @@ const FormularioRestaurante = () => {
     evento.preventDefault()
 
     if (parametrosDaURL.id) {
-      axios.put(`http://localhost:8000/api/v2/restaurantes/${parametrosDaURL.id}/`, {
+      http.put(`restaurantes/${parametrosDaURL.id}/`, {
         nome: nomeRestaurante
       })
         .then(() => {
@@ -31,7 +31,7 @@ const FormularioRestaurante = () => {
 
     } else {
 
-      axios.post('http://localhost:8000/api/v2/restaurantes/', {
+      http.post('restaurantes/', {
         nome: nomeRestaurante
       })
         .then(() => {
@@ -42,15 +42,27 @@ const FormularioRestaurante = () => {
   }
 
   return (
-    <form onSubmit={aoSubmitForm}>
-      <TextField
-        value={nomeRestaurante}
-        onChange={evento => setNomeRestaurante(evento.target.value)}
-        label="Nome do Restaurante"
-        variant="standard"
-      />
-      <Button type="submit" variant="outlined">Salvar</Button>
-    </form>
+    <Box>
+      <Container maxWidth='lg' sx={{ mt: 1 }}>
+        <Paper sx={{ p: 2 }}>
+          {/* conteúdo da página */}
+          <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, alignItems: 'center' }}>
+            <Typography component="h1" variant='h6'>Formulário de Restaurantes</Typography>
+            <Box component='form' sx={{ width: '100%' }} onSubmit={aoSubmitForm}>
+              <TextField
+                value={nomeRestaurante}
+                onChange={evento => setNomeRestaurante(evento.target.value)}
+                label="Nome do Restaurante"
+                variant="standard"
+                fullWidth
+                required
+              />
+              <Button sx={{ marginTop: 1 }} type="submit" variant="outlined" fullWidth>Salvar</Button>
+            </Box>
+          </Box>
+        </Paper>
+      </Container>
+    </Box>
   )
 }
 

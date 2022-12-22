@@ -2,3 +2,61 @@
   margin-top: 1.5rem;
   padding: 2rem;
 }
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  background: #f2f6ff;
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
+  padding: 20px;
+}
+
+.formInput {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.formInput input {
+  width: 50%;
+  font-size: 1.5em;
+  border-radius: 4px;
+  border: 2px solid azure;
+}
+
+.formInput label {
+  font-size: 1.5em;
+}
+
+.formInput select {
+  font-size: 1.5em;
+  border-radius: 4px;
+  outline: none;
+  border: 2px solid azure;
+}
+
+.ListaRestaurantes button {
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+.ListaRestaurantes button:hover:enabled {
+  background-color: #f2745f;
+}
+
+.ListaRestaurantes button:active:enabled {
+  background-color: #e1aea6;
+}
+
+.containerBotoes {
+  display: flex;
+  justify-content: space-around;
+}

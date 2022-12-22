@@ -11,12 +11,12 @@
 - Editando e deletando restaurantes :white_check_mark:
 - Desafio: Campo de busca restaurante :white_check_mark:
 ### Aula 4: 
-- Layout na régua
-- Refatorando o axios
-- Desafio: ordenando restaurantes
+- Layout na régua :white_check_mark:
+- Refatorando o axios :white_check_mark:
+- Desafio: ordenando restaurantes :white_check_mark:
 ### Aula 5:
-- Upgrade na pagina administração
-- Extraindo o layout base
+- Upgrade na pagina administração :white_check_mark:
+- Extraindo o layout base :white_check_mark:
 ### Aula 6: 
 - Exibindo pratos
 - Formulário de pratos
