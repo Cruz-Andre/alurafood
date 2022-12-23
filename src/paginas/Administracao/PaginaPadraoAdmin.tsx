@@ -1,8 +1,6 @@
 import { Box, Button, Typography, AppBar, Container, Toolbar, Link, Paper } from "@mui/material"
 import { Link as RouterLink, Outlet } from "react-router-dom"
 
-
-
 const PaginaPadraoAdmin = () => {
 
   return (
@@ -24,16 +22,25 @@ const PaginaPadraoAdmin = () => {
                   Novo Restaurante
                 </Button>
               </Link>
+              <Link component={RouterLink} to='/admin/pratos'>
+                <Button sx={{ my: 2, color: 'white' }}>
+                  Pratos
+                </Button>
+              </Link>
+              <Link component={RouterLink} to='/admin/pratos/novo'>
+                <Button sx={{ my: 2, color: 'white' }}>
+                  Novo Prato
+                </Button>
+              </Link>
             </Box>
           </Toolbar>
         </Container>
       </AppBar>
 
       <Box>
-        <Container maxWidth='lg' sx={{ mt: 1 }}>
+        <Container maxWidth='xl' sx={{ mt: 1 }}>
           <Paper sx={{ p: 2 }}>
-            {/* conteúdo da página */}
-            <Outlet/>            
+            <Outlet/>  {/* conteúdos da página */}  
           </Paper>
         </Container>
       </Box>

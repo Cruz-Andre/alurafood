@@ -18,10 +18,10 @@
 - Upgrade na pagina administração :white_check_mark:
 - Extraindo o layout base :white_check_mark:
 ### Aula 6: 
-- Exibindo pratos
-- Formulário de pratos
-- Enviando pratos para API
-- Desafio: Administrando pratos
+- Exibindo pratos :white_check_mark:
+- Formulário de pratos :white_check_mark:
+- Enviando pratos para API :white_check_mark:
+- Desafio: Administrando pratos :white_check_mark:
 
 # Alfood
 
@@ -47,11 +47,21 @@ Se liga nessa lista de tudo que usaremos nesse treinamento:
 
 ## 🛠️ Abrir e rodar o projeto
 
-Para abrir e rodar o projeto, execute npm i para instalar as dependências e npm start para inicar o projeto.
+Para abrir e rodar o projeto: Na pasta alurafood execute npm i para instalar as dependências e npm start para inicar o projeto.
 
 Depois, acesse <a href="http://localhost:3000/">http://localhost:3000/</a> no seu navegador.
 
-Instalar o Docker para utilizar a API.
+## 🛠️ Abrir e rodar a API
+
+Baixar a API <a href="https://github.com/alura-cursos/restaurantes_api" target="_blank">https://github.com/alura-cursos/restaurantes_api</a>
+
+Instalar o Docker desktop <a href="https://www.docker.com/" target="_blank">https://www.docker.com/</a>
+
+Na pasta restaurantes_api-master, (somente na 1º vez) execute: docker compose build.
+
+Na pasta restaurantes_api-master, para iniciar a API execute: docker compose up
+
+Depois, acesse <a href="http://localhost:8000/" target="_blank">http://localhost:8000/</a> no seu navegador.
 
 ## 📚 Mais informações do curso
 
